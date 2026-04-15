@@ -122,7 +122,6 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Document, Monitor, School, User, DataAnalysis } from '@element-plus/icons-vue'
-import api from '../api'
 
 const router = useRouter()
 

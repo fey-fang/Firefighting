@@ -177,7 +177,7 @@ const editUser = (row: any) => {
   dialogVisible.value = true
 }
 
-const deleteUser = (row: any) => {
+const deleteUser = (_row: any) => {
   ElMessageBox.confirm('确定要删除该用户吗？', '提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',

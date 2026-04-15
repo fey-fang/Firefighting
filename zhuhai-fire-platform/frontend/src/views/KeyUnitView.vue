@@ -253,7 +253,7 @@ const editUnit = (row: any) => {
   dialogVisible.value = true
 }
 
-const deleteUnit = (row: any) => {
+const deleteUnit = (_row: any) => {
   ElMessageBox.confirm('确定要删除该重点单位吗？', '提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',

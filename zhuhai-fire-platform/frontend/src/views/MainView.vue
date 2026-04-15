@@ -37,7 +37,7 @@
             <span>系统管理</span>
           </template>
           <el-menu-item index="/main/user">
-            <el-icon><Users /></el-icon>
+            <el-icon><User /></el-icon>
             <span>用户管理</span>
           </el-menu-item>
           <el-menu-item index="/main/keyunit">
@@ -86,7 +86,6 @@ import {
   DataAnalysis,
   User,
   ArrowDown,
-  Users,
   OfficeBuilding,
   Setting
 } from '@element-plus/icons-vue'

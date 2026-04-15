@@ -194,7 +194,7 @@ const viewPlan = (row: any) => {
   ElMessage.info(`查看预案：${row.name}`)
 }
 
-const deletePlan = async (row: any) => {
+const deletePlan = async (_row: any) => {
   try {
     await ElMessageBox.confirm('确定要删除该预案吗？', '提示', {
       confirmButtonText: '确定',

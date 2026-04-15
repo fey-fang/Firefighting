@@ -177,7 +177,7 @@ const editPlan = (row: any) => {
   dialogVisible.value = true
 }
 
-const deletePlan = (row: any) => {
+const deletePlan = (_row: any) => {
   ElMessageBox.confirm('确定要删除该训练计划吗？', '提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
