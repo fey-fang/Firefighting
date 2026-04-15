@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: zhuhai-fire-platform
+  
+  # 数据库配置
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zhuhai_fire
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    database: 0
+  
+  # RocketMQ配置
+  rocketmq:
+    name-server: localhost:9876
+    producer:
+      group: zhuhai-fire-producer
+  
+  # 安全配置
+  security:
+    user:
+      name: admin
+      password: admin
+
+# MyBatis Plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.zhuhai.fire.entity
+  global-config:
+    db-config:
+      id-type: auto
+
+# MinIO配置
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: zhuhai-fire
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# 日志配置
+logging:
+  level:
+    com.zhuhai.fire: info
+    org.springframework: warn

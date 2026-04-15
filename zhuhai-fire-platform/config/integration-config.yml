@@ -1,0 +1,88 @@
+# 系统集成配置
+
+# 服务配置
+services:
+  # 认证服务
+  auth:
+    url: http://localhost:8080/api/auth
+    timeout: 3000
+  
+  # 预案系统
+  plan:
+    url: http://localhost:8080/api/plan
+    timeout: 5000
+  
+  # 沙盘推演系统
+  scenario:
+    url: http://localhost:8080/api/scenario
+    timeout: 5000
+  
+  # 训练考核系统
+  training:
+    url: http://localhost:8080/api/training
+    timeout: 5000
+  
+  # 移动端API
+  mobile:
+    url: http://localhost:8080/api/mobile
+    timeout: 5000
+
+# 数据库配置
+database:
+  host: localhost
+  port: 5432
+  username: postgres
+  password: password
+  database: zhuhai_fire
+
+# Redis配置
+redis:
+  host: localhost
+  port: 6379
+  password: 
+  database: 0
+
+# RocketMQ配置
+rocketmq:
+  name-server: localhost:9876
+  producer-group: zhuhai-fire-producer
+
+# MinIO配置
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket-name: zhuhai-fire
+
+# 三维模型配置
+models:
+  base-path: /models
+  units-path: /models/units
+  vehicles-path: /models/vehicles
+  personnel-path: /models/personnel
+  equipment-path: /models/equipment
+  facilities-path: /models/facilities
+
+# 外部接口配置
+external:
+  # 粤政图接口
+  yuezheng:
+    url: https://api.yuezheng.com
+    api-key: your-api-key
+  
+  # 接处警系统接口
+  alarm:
+    url: http://localhost:8081/api
+    username: admin
+    password: admin
+  
+  # 市政水务系统接口
+  water:
+    url: http://localhost:8082/api
+    api-key: your-api-key
+
+# 安全配置
+security:
+  jwt-secret: zhuhai-fire-platform-secret-key
+  jwt-expire: 86400000
+  encryption-algorithm: SM2
