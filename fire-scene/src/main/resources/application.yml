@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: fire-scene
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: fire-platform
+      config:
+        server-addr: localhost:8848
+        namespace: fire-platform
+        file-extension: yaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fire_platform
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8084
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zhuhai.fire.scene.entity

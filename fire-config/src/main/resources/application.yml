@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: fire-config
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: fire-platform
+      config:
+        server-addr: localhost:8848
+        namespace: fire-platform
+        file-extension: yaml
+
+server:
+  port: 8082

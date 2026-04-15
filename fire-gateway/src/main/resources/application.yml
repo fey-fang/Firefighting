@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: fire-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: fire-platform
+      config:
+        server-addr: localhost:8848
+        namespace: fire-platform
+        file-extension: yaml
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: auth-service
+          uri: lb://fire-auth
+          predicates:
+            - Path=/auth/**
+        - id: scene-service
+          uri: lb://fire-scene
+          predicates:
+            - Path=/scene/**
+        - id: plan-service
+          uri: lb://fire-plan
+          predicates:
+            - Path=/plan/**
+        - id: training-service
+          uri: lb://fire-training
+          predicates:
+            - Path=/training/**
+        - id: mobile-service
+          uri: lb://fire-mobile
+          predicates:
+            - Path=/mobile/**
+        - id: statistics-service
+          uri: lb://fire-statistics
+          predicates:
+            - Path=/statistics/**
+
+server:
+  port: 8080
